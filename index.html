@@ -8,7 +8,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="grid" id="grid">
+    <div class="container">
+        <input type="range" value="24" min="1" max="48" id="rangeInput" oninput="this.nextElementSibling.value = this.value">
+        <output id="size">24</output>
+    </div>
+    <div class="chooseColor">
+        <input type="button" id="chooseColor" value="Multi Colours Mode">
+    </div>
+
+    <div class="multiColor">
+        <input type="color" value = "RGB(54,116,124)">
+        <label for="head">Head</label>
+    </div>
+
+    <div class="grid-container" id="grid-container">
 
     </div>
 
