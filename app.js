@@ -1,26 +1,42 @@
+
 // Add cells to grid container
 const container = document.getElementById("grid-container")
+const clearBtn = document.getElementById("clear")
+const gridSizeOrig = document.getElementById("size")
 const gridSize = document.getElementById("size").value
 const sliderSize = document.getElementById("rangeInput")
+const colorPicker = document.getElementById("colorPicker")
+const defaultColor = "#0000ff"
 
-// Create buttons
-// Create button to clear grid
-let clearBtn = document.createElement("button")
-clearBtn.innerHTML = "Clear"
-document.body.appendChild(clearBtn)
 
+// Create a colour picker for the user
+colorPicker.value = defaultColor
+colorPicker.addEventListener("input",function(e){
+    let colour = e.target.value
+    let allDivs = document.querySelectorAll("div > div")
+    allDivs.forEach(function(element) {
+        element.addEventListener("mouseover", function(e) {
+            if (e.target.classList.value.substring(0,6) === "square") {
+                e.target.style.background = `${colour}`
+            }
+        })
+    })
+})
+
+// Add event listeners
 clearBtn.addEventListener("click", clear)
 
 // Clear grid
 function clear() {
     for (let i = 1; i <= 10000; i++) {
         let squares = document.querySelectorAll(`.square${i}`)
-        
         squares.forEach(function(element) {
             element.style.backgroundColor = 'white'
         });
     }
 }
+
+
 
 // Create Grid
 function createGrid(size){
@@ -33,11 +49,15 @@ function createGrid(size){
         let cell = document.createElement("div")
         cell.classList = `square${i}`
         cell.innerHTML = ""
+        
         container.appendChild(cell)
     }
-    // Shade in for user's chosen size
+    gridSizeOrig.textContent = `${size} x ${size}`
+    
     shadeIn(size)
+    colorPicker.value = defaultColor
 }
+
 
 // Shade in
 function shadeIn(size) {
@@ -46,12 +66,11 @@ function shadeIn(size) {
         //console.log(squares)
         squares.forEach(function(element) {
             element.addEventListener("mouseover", function(e) { // throw this into a function of it's own
-                e.target.style.background = "red" // set to multi varying color
+                e.target.style.background = "#0000ff" // set to multi varying color
             })
         });
     }
 }
-
 
 // Customise size of grid 
 sliderSize.addEventListener("change",function(e){
@@ -64,6 +83,4 @@ sliderSize.addEventListener("change",function(e){
 // Run
 createGrid(gridSize)
 
-let testing = document.getElementById("chooseColor")
 
-console.log(testing)

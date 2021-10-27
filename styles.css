@@ -1,16 +1,140 @@
+body {
+    background-color: #cacad9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px 100px 0px 24%;
+    width: 370px;
+    text-decoration: underline;
+    color: #181824;
+}
+
+h1:hover {
+    color: #0000ff;
+}
+
+
 .grid-container {
     display: inline-grid;
-    grid-template-columns: repeat(20, auto); /* change to be dynamic for a number of different sizes*/
-    border: 1px solid black;
-    margin: 100px 0 0 0;
+    grid-template-columns: repeat(20, auto);
+    height: 700px;
+    width: 700px;
+    border: 5px solid black;
+    margin: 0px 0 0 15%;
 }
 
 .grid-container div {
-    border: 1px solid black;
-    height: 20px;
-    width: 20px;
+    background-color: white;
+    /* border-radius: 40px; */
+    height: auto;
+    width: auto;
 }
 
-#chooseColor {
+.active {
     border-style:inset;
+    background-color: darkcyan;
 }
+
+#rangeInput {
+    padding: 0 0 0 0;
+    
+}
+
+.buttons {
+    display: flex;
+    margin: 60px 0 0 21%;
+    /* min-width: 700px; */
+}
+
+.buttons .container {
+    padding-top: 30px;
+    font-weight: bolder;
+    display: block;
+}
+
+.multiColor {
+    margin: 0 70px 0 70px;
+    font-size: 25px;
+    font-weight: bolder;
+    color:gainsboro;
+}
+
+#size {
+    font-size: 20px;
+}
+
+.clear {
+    padding-top: 20px;
+}
+
+#clear {
+    padding: 9px 4px 0 0;
+    height: 30px;
+    width: 90px;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    font-weight: bolder;
+}
+
+#clear:hover {
+    background-color:#0000ff;
+    color: white;
+    height: 35px;
+    width: 95px;
+    padding-left: 6px;
+}
+
+#grid-container {
+    margin-top: 40px;
+    min-width: 770px;
+}
+
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+}
+
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+  
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+button:hover,
+input[type='color']:hover {
+  transform: scale(1.05);
+}
+
+
+.footer {
+    padding: 0px 300px 0px 300px;
+    min-width: 400px;
+    text-align: center;
+    background-color:#00050d;
+    color:white;
+    height: 40px;
+    margin-top: 100px;
+}
+
+.footer p {
+    padding-top: 12px;
+    font-size: 16px;
+}
+

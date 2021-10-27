@@ -8,25 +8,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <input type="range" value="24" min="1" max="48" id="rangeInput" oninput="this.nextElementSibling.value = this.value">
-        <output id="size">24</output>
+    <div class="header">
+        <h1>The Ultimate Sketch Pad</h1>
     </div>
-    <div class="chooseColor">
-        <input type="button" id="chooseColor" value="Multi Colours Mode">
-    </div>
+    <div class="flex-container buttons">
+        <div class="container">
+            <input type="range" value="24" min="1" max="64" id="rangeInput">
+            <output id="size">24</output>
+        </div>
+    
+        <div class="multiColor">
+            <input type="color" value = "#ff0000" id="colorPicker">
+        </div>
 
-    <div class="multiColor">
-        <input type="color" value = "RGB(54,116,124)">
-        <label for="head">Head</label>
+        <div class="clear">
+            <input type="button" value="Clear" id="clear">
+        </div>
     </div>
 
     <div class="grid-container" id="grid-container">
-
     </div>
 
 
-
+    <div class="footer">
+        <p>
+            <strong>Sketch-Pad by M-Afsari &copy;</strong>
+        </p>
+    </div>
 
     <script src="app.js"></script>
 </body>
