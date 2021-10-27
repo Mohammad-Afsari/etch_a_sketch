@@ -3,9 +3,7 @@
 <br />
 <p align="center">
    <a href="https://github.com/Mohammad-Afsari/etch_a_sketch">
-     <img src="img/rock.png" alt="Rock" width="100" height="100">
-     <img src="img/paper.png" alt="Rock" width="100" height="100">
-     <img src="img/scissors.png" alt="Rock" width="100" height="100">
+     <img src="img/Logo.png" alt="Rock" width="300" height="300">
    </a>
 
   <p align="center">
